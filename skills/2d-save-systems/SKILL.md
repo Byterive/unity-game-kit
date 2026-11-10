@@ -1,6 +1,6 @@
 ---
 name: 2d-save-systems
-description: Use when designing save/load for a Unity game: versioned schema, migrations, atomic writes, backups, autosave.
+description: "Use when designing save/load for a Unity game: versioned schema, migrations, atomic writes, backups, autosave."
 ---
 
 # Save systems (Unity)

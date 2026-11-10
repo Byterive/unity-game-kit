@@ -1,6 +1,6 @@
 ---
 name: 2d-game-feel
-description: Use when adding juice to a 2D game: feedback stacking, hit-stop, camera shake, easing, squash and stretch, with reduce-motion options.
+description: "Use when adding juice to a 2D game: feedback stacking, hit-stop, camera shake, easing, squash and stretch, with reduce-motion options."
 ---
 
 # 2D game feel (juice)

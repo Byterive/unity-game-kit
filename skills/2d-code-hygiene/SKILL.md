@@ -1,6 +1,6 @@
 ---
 name: 2d-code-hygiene
-description: Use when writing or reviewing C# gameplay code in a 2D Unity game: MonoBehaviour habits, ScriptableObject data, seeded RNG, allocation-free updates.
+description: "Use when writing or reviewing C# gameplay code in a 2D Unity game: MonoBehaviour habits, ScriptableObject data, seeded RNG, allocation-free updates."
 ---
 
 # 2D code hygiene (Unity C#)

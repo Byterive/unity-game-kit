@@ -1,6 +1,6 @@
 ---
 name: 2d-ui-touch-mobile
-description: Use when building touch UI and input for a 2D Unity mobile game: uGUI scaling, safe areas, touch targets, Input System, buffering, rebinding.
+description: "Use when building touch UI and input for a 2D Unity mobile game: uGUI scaling, safe areas, touch targets, Input System, buffering, rebinding."
 ---
 
 # 2D UI, touch and input (Unity)
