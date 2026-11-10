@@ -1,0 +1,19 @@
+{
+  "name": "hero-round1-checkpoints",
+  "type": "sprite",
+  "subject": "red gem with a star symbol",
+  "seeds": [
+    101,
+    202
+  ],
+  "checkpoints": [
+    "all"
+  ],
+  "loras": [
+    null
+  ],
+  "loraStrengths": [
+    0.8
+  ],
+  "overrides": {}
+}

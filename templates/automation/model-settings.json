@@ -1,0 +1,106 @@
+{
+  "JuggernautXL_Ragnarok_ByRunDiffusion.safetensors": {
+    "family": "sdxl",
+    "sampler": "dpmpp_2m_sde",
+    "scheduler": "karras",
+    "steps": 35,
+    "cfg": 4.5,
+    "notes": "Civitai: 30-40 steps, CFG 3-6, 832x1216, baked VAE, few negatives. Start-here."
+  },
+  "DynaVisionXL_0.6.1.0.fp16.safetensors": {
+    "family": "sdxl",
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "steps": 30,
+    "cfg": 6,
+    "notes": "Page lists no settings; SDXL defaults. Do not use refiner. Start-here."
+  },
+  "animagine-xl-4.0.safetensors": {
+    "family": "sdxl",
+    "sampler": "euler_ancestral",
+    "scheduler": "normal",
+    "steps": 28,
+    "cfg": 5,
+    "notes": "HF card: 25-28 steps, CFG 4-7. Anime-leaning flat 2D. Optional."
+  },
+  "playground-v2.5-1024px-aesthetic.fp16.safetensors": {
+    "family": "sdxl",
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "steps": 30,
+    "cfg": 3,
+    "notes": "EDM-based SDXL architecture; card suggests guidance 3 (EDM DPM) or 5 (EDM Euler). SDXL LoRAs mostly incompatible. Optional."
+  },
+  "DreamShaperXL_Turbo-Lightning.safetensors": {
+    "family": "sdxl",
+    "sampler": "dpmpp_sde",
+    "scheduler": "karras",
+    "steps": 5,
+    "cfg": 2,
+    "notes": "Civitai: 3-6 steps, CFG 2. Turbo lineage: commercial status unclear. Optional."
+  },
+  "sd_xl_base_1.0.safetensors": {
+    "family": "sdxl",
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "steps": 30,
+    "cfg": 7,
+    "notes": "Baseline only; refiner not worth it. Optional."
+  },
+  "flux-2-klein-4b-fp8.safetensors": {
+    "family": "flux2",
+    "sampler": "euler",
+    "scheduler": "simple",
+    "steps": 4,
+    "cfg": 1,
+    "notes": "Needs qwen_3_4b.safetensors + flux2-vae.safetensors. Distilled 4-step, Apache 2.0. Start-here."
+  },
+  "z_image_turbo_bf16.safetensors": {
+    "family": "other",
+    "sampler": "res_multistep",
+    "scheduler": "simple",
+    "steps": 9,
+    "cfg": 1,
+    "notes": "Z-Image; needs qwen_3_4b.safetensors + ae.safetensors; shift 3; alt dpmpp_sde+beta 5 steps. 12.3 GB, offloads on 12 GB. Optional."
+  },
+  "flux1-schnell-Q5_K_S.gguf": {
+    "family": "flux",
+    "sampler": "euler",
+    "scheduler": "simple",
+    "steps": 4,
+    "cfg": 1,
+    "notes": "ComfyUI-GGUF; t5xxl_fp8_e4m3fn + clip_l + ae. Apache 2.0. Optional."
+  },
+  "flux1-dev-Q5_K_S.gguf": {
+    "family": "flux",
+    "sampler": "euler",
+    "scheduler": "simple",
+    "steps": 20,
+    "cfg": 1,
+    "notes": "FluxGuidance 3.5. License ambiguous for commercial outputs. Optional."
+  },
+  "sd3.5_medium.safetensors": {
+    "family": "sd3.5",
+    "sampler": "euler",
+    "scheduler": "sgm_uniform",
+    "steps": 40,
+    "cfg": 4.5,
+    "notes": "Gated; clip_g + clip_l + t5xxl_fp8. Steps/CFG from card, sampler assumed. Optional."
+  },
+  "qwen-image-Q3_K_M.gguf": {
+    "family": "other",
+    "sampler": "euler",
+    "scheduler": "simple",
+    "steps": 20,
+    "cfg": 2.5,
+    "notes": "Qwen-Image v1, Apache 2.0; heavy on 12 GB; settings are typical defaults, not verified. Not recommended."
+  },
+  "sdxl_lightning_8step_lora.safetensors": {
+    "family": "sdxl",
+    "sampler": "euler",
+    "scheduler": "sgm_uniform",
+    "steps": 8,
+    "cfg": 1.0,
+    "notes": "Speed LoRA; strength 1.0. Overrides the checkpoint's steps and CFG."
+  }
+}

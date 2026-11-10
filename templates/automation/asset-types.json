@@ -1,0 +1,44 @@
+{
+  "sprite": {
+    "description": "A game object sprite seen from the front (piece, item, character).",
+    "genWidth": 1024,
+    "genHeight": 1024,
+    "removeBackground": true,
+    "outputSize": [
+      512,
+      512
+    ],
+    "padding": 0.06,
+    "target": "Assets/__ID__/Resources/__ID__/Sprites/sprite_{name}.png",
+    "prompt": "{subject}, single game object, centered, front view, {style}, plain light grey background, no text",
+    "negative": "text, letters, watermark, signature, frame, border, multiple objects, cropped, blurry, noisy, photo, realistic hands"
+  },
+  "background": {
+    "description": "Full-screen backdrop behind the board.",
+    "genWidth": 1344,
+    "genHeight": 768,
+    "removeBackground": false,
+    "outputSize": [
+      1376,
+      768
+    ],
+    "padding": 0,
+    "target": "Assets/__ID__/Resources/__ID__/Sprites/bg_{name}.png",
+    "prompt": "{subject}, soft game background, low contrast, calm, empty center area for a puzzle board, {style}, no text",
+    "negative": "text, letters, watermark, characters, busy details, high contrast, blurry"
+  },
+  "icon": {
+    "description": "A UI button icon (hint, undo, reset, settings, shop).",
+    "genWidth": 1024,
+    "genHeight": 1024,
+    "removeBackground": true,
+    "outputSize": [
+      256,
+      256
+    ],
+    "padding": 0.1,
+    "target": "Assets/__ID__/Resources/__ID__/Sprites/icon_{name}.png",
+    "prompt": "{subject} icon, simple bold silhouette, centered, mobile game UI icon, {style}, plain light grey background, no text",
+    "negative": "text, letters, watermark, thin lines, tiny details, multiple icons, frame, blurry"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "kit": "unity-game-kit",
+  "kitVersion": "__KIT_VERSION__",
+  "name": "__NAME__",
+  "id": "__ID__",
+  "envPrefix": "__ENV__",
+  "unityProject": "Unity",
+  "platforms": ["android"],
+  "orientation": "portrait",
+  "art": "comfyui",
+  "testPhone": "",
+  "modules": [],
+  "skip": [],
+  "notes": []
+}

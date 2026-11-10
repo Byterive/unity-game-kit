@@ -1,0 +1,58 @@
+{
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": { "ckpt_name": "sd_xl_base_1.0.safetensors" },
+    "_meta": { "title": "Checkpoint" }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": { "text": "", "clip": ["4", 1] },
+    "_meta": { "title": "Positive" }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": { "text": "", "clip": ["4", 1] },
+    "_meta": { "title": "Negative" }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": { "image": "source.png" },
+    "_meta": { "title": "Source" }
+  },
+  "11": {
+    "class_type": "VAEEncode",
+    "inputs": { "pixels": ["10", 0], "vae": ["4", 2] },
+    "_meta": { "title": "Encode" }
+  },
+  "12": {
+    "class_type": "RepeatLatentBatch",
+    "inputs": { "samples": ["11", 0], "amount": 1 },
+    "_meta": { "title": "Latent" }
+  },
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 1,
+      "steps": 28,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.5,
+      "model": ["4", 0],
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "latent_image": ["12", 0]
+    },
+    "_meta": { "title": "Sampler" }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": { "samples": ["3", 0], "vae": ["4", 2] },
+    "_meta": { "title": "Decode" }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": { "filename_prefix": "__LOWER__", "images": ["8", 0] },
+    "_meta": { "title": "Save" }
+  }
+}

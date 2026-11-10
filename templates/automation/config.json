@@ -1,0 +1,22 @@
+{
+  "unityProject": "Unity",
+  "unityEditor": "",
+  "comfyUrl": "http://127.0.0.1:8188",
+  "checkpoint": "sd_xl_base_1.0.safetensors",
+  "lora": "",
+  "loraStrength": 0.8,
+  "steps": 28,
+  "cfg": 6.0,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "reviewDir": "ArtReview",
+  "android": {
+    "productName": "__NAME__",
+    "companyName": "",
+    "packageId": "",
+    "version": "0.1.0",
+    "versionCode": 1
+  },
+  "adb": "",
+  "contentCheckMethod": ""
+}
