@@ -27,7 +27,7 @@ Ask only what you can't find out, and keep every answer in `gamekit.json` so no 
 ## 3. Apply the kit
 
 1. `git init` if there is no repo; first commit of whatever exists.
-2. If the kickoff plugin is installed, run `/kickoff:bootstrap` with profile `unity` (docs, budgets, PROJECT_STATUS.md, hooks). Otherwise say once that it adds docs and budgets, and go on.
+2. If the kickoff plugin is installed, run `/kickoff:kickoff` with profile `unity` (docs, budgets, PROJECT_STATUS.md, hooks). Otherwise say once that it adds docs and budgets, and go on.
 3. `python ../../scripts/apply_template.py --root . --name "<name>" --dry-run`, show the user what will be written and kept, then run it without `--dry-run`. It never overwrites.
 4. Merge what it printed as `claude_section` into `CLAUDE.md` (create it if missing). For each file listed as "kept", compare with the template and merge only what is missing, asking before changing anything the user wrote.
 5. Write the answers into `gamekit.json` (`platforms`, `orientation`, `art`, `modules`) and `automation/config.json` (`android.productName`; `packageId` stays empty until the name is final).

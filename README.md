@@ -6,7 +6,13 @@ Version 0.2.0 · MIT · Works with Claude Code
 
 ## What it does
 
-We built unity-game-kit to set up a Unity game project the same way every time and then check what is still missing. It adds Editor build and check scripts, an Android build and install pipeline, a local ComfyUI art pipeline with model comparison, seven 2D game skills with optional modules, and a doctor that names the next missing step.
+We built unity-game-kit to set up a Unity game project the same way every time, then check what is still missing. It adds:
+
+- Editor build and check scripts
+- an Android build and install pipeline
+- a local ComfyUI art pipeline with model comparison
+- seven 2D game skills with optional modules
+- a doctor that names the next missing step
 
 Scope: Windows, Unity 6, Android.
 
@@ -32,15 +38,28 @@ Pick **project** scope inside each game. After a new version is released: `/plug
 | `/build-android` | Development APK over USB, or a signed AAB for Google Play | an installed build or a bundle |
 | `/store-shots` | Captures and frames store screenshots and the feature graphic | store-ready images |
 
-**2D skills:** `2d-code-hygiene`, `2d-game-feel`, `2d-ui-touch-mobile`, `2d-performance-android`, `2d-save-systems`, `2d-art-pipeline` and `2d-level-pacing-prototype` are always on. `2d-pack-index` loads the optional modules a game lists in `gamekit.json` (camera, audio, shaders, physics tuning, AI pathing, procedural, and at most one genre). The Google Play figures in the pack are dated 2026-11-04; check them before you release.
+## The 2D skills
 
-On session start, a project with a `gamekit.json` gets one line if setup items need attention. More in the [how-to](https://github.com/Byterive/kit/blob/main/docs/howto/02-unity-game-kit.md).
+Seven are always on: `2d-code-hygiene`, `2d-game-feel`, `2d-ui-touch-mobile`, `2d-performance-android`, `2d-save-systems`, `2d-art-pipeline` and `2d-level-pacing-prototype`.
+
+`2d-pack-index` loads the optional modules a game lists in `gamekit.json`: camera, audio, shaders, physics tuning, AI pathing, procedural, and at most one genre.
+
+The Google Play figures in the pack are dated 2026-11-04. Check them before you release.
+
+## What runs on your machine
+
+On session start, a hook runs `scripts/doctor.py --brief` (Python standard library only). In a project with a `gamekit.json` it reads your project files, checks whether ComfyUI answers at the address below, and prints one line if setup items need attention. Outside a kit project it stays silent.
+
+The doctor prints install hints as text. It never runs them for you.
+
+More in the [how-to](https://github.com/Byterive/kit/blob/main/docs/howto/02-unity-game-kit.md).
 
 ## Needs and limits
 
 - Windows, Unity 6, Python 3, and an Android phone for builds.
-- Art generation needs a local ComfyUI and models you download yourself under their own licences; `reference/comfyui-models.md` lists models for a 12 GB GPU and has a licences section.
-- Version 1 covers Windows and Android only.
+- Art generation needs a local ComfyUI and models you download yourself under their own licences. `reference/comfyui-models.md` lists models for a 12 GB GPU and has a licences section.
+- ComfyUI runs on your own machine. The kit talks to it only at `http://127.0.0.1:8188`, set in `automation/config.json`.
+- Background removal uses `rembg` and `onnxruntime`. You install them yourself with pip (`pip install -r automation/requirements.txt`); the kit does not bundle or auto-install them.
 
 ## Tests
 

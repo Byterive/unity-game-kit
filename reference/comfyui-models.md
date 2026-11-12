@@ -33,7 +33,7 @@ Custom nodes to install with ComfyUI Manager (ComfyUI Desktop already includes t
 
 | Name | Type | Folder | Size | Link | Why / note |
 |---|---|---|---|---|---|
-| Z-Image Turbo bf16 (`z_image_turbo_bf16.safetensors`) | Diffusion model | models/diffusion_models | 12.3 GB | [HF Comfy-Org](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models) | Apache 2.0, 8-step, renders text well. It is larger than 12 GB VRAM, so ComfyUI offloads part of it to RAM and it runs slower. An `int8_convrot` file (6.2 GB) also exists, but I did not check whether it works on a 3060. Skip the `nvfp4` file: NVFP4 is a Blackwell-GPU format. |
+| Z-Image Turbo bf16 (`z_image_turbo_bf16.safetensors`) | Diffusion model | models/diffusion_models | 12.3 GB | [HF Comfy-Org](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models) | Apache 2.0, 8-step, renders text well. It is larger than 12 GB VRAM, so ComfyUI offloads part of it to RAM and it runs slower. An `int8_convrot` file (6.2 GB) also exists, but we have not checked whether it works on a 3060. Skip the `nvfp4` file: NVFP4 is a Blackwell-GPU format. |
 | Z-Image VAE (`ae.safetensors`) | VAE | models/vae | 335 MB | [HF Comfy-Org](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae) | This is the FLUX.1 VAE, also used by FLUX.1 schnell/dev. Text encoder: reuse `qwen_3_4b.safetensors`. A lighter `qwen_3_4b_fp8_mixed` (5.63 GB) is in the same [repo](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders). |
 | Animagine XL 4.0 (`animagine-xl-4.0.safetensors`; an `-opt` file is also listed) | SDXL checkpoint | models/checkpoints | 6.94 GB | [HF cagliostrolab](https://huggingface.co/cagliostrolab/animagine-xl-4.0) | Flat, clean 2D illustration. Its anime bias can be useful for icons. OpenRAIL++, and the card says commercial use is allowed. |
 | Playground v2.5 (`playground-v2.5-1024px-aesthetic.fp16.safetensors`) | SDXL-arch checkpoint | models/checkpoints | 6.94 GB | [HF playgroundai](https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic/tree/main) | Very saturated, glossy colours. Uses an EDM sampler internally. SDXL LoRAs mostly do not transfer. Community license (see Licenses). |
@@ -53,7 +53,7 @@ Custom nodes to install with ComfyUI Manager (ComfyUI Desktop already includes t
 | CLIP-ViT-H image encoder (`models/image_encoder/model.safetensors`, rename to `CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors`) | CLIP vision | models/clip_vision | 2.53 GB | [HF h94](https://huggingface.co/h94/IP-Adapter/tree/main/models/image_encoder) | Required by the vit-h IP-Adapter. The Unified Loader needs this exact name. |
 | 4x-UltraSharp (`4x-UltraSharp.safetensors`) | Upscaler | models/upscale_models | 66.9 MB | [HF Kim2091](https://huggingface.co/Kim2091/UltraSharp/tree/main) | Popular and sharp, but licensed **CC BY-NC-SA 4.0**. Use RealESRGAN for shipped art. |
 | RealESRGAN x4plus (`RealESRGAN_x4plus.pth`) | Upscaler | models/upscale_models | ~67 MB | [GitHub release v0.1.0](https://github.com/xinntao/Real-ESRGAN/releases) | General-purpose upscaler. BSD-3. |
-| ComfyUI-RMBG node (BiRefNet, BiRefNet_toonOut, RMBG-2.0, BEN2) | custom_nodes | custom_nodes | models auto-fetched | [GitHub 1038lab](https://github.com/1038lab/ComfyUI-RMBG) | Background removal inside ComfyUI, as an alternative to your Python rembg step. Node code is GPL-3.0. Check each model's own license; I did not verify RMBG-2.0's. BiRefNet_toonOut suits stylized art. |
+| ComfyUI-RMBG node (BiRefNet, BiRefNet_toonOut, RMBG-2.0, BEN2) | custom_nodes | custom_nodes | models auto-fetched | [GitHub 1038lab](https://github.com/1038lab/ComfyUI-RMBG) | Background removal inside ComfyUI, as an alternative to your Python rembg step. Node code is GPL-3.0. Check each model's own license; RMBG-2.0's licence is not verified. BiRefNet_toonOut suits stylized art. |
 
 Optional total if you take everything: about 99 GB. A sensible first add-on is Z-Image Turbo, the four LoRAs, IP-Adapter + CLIP-ViT-H, and Animagine: about 24 GB.
 
@@ -72,7 +72,7 @@ Optional total if you take everything: about 99 GB. A sensible first add-on is Z
 | z_image_turbo_bf16 | Z-Image (other) | res_multistep | simple | 9 | 1 | Card: 8-9 steps, guidance 0 (CFG 1 in ComfyUI), shift 3. Alternative: dpmpp_sde + beta at 5 steps. |
 | flux1-schnell-Q5_K_S | FLUX.1 | euler | simple | 4 | 1 | Apache 2.0. No negative prompt. |
 | flux1-dev-Q5_K_S | FLUX.1 | euler | simple | 20-25 | 1 | Use FluxGuidance 3.5 instead of CFG. Common defaults, not from the page. |
-| sd3.5_medium | SD3.5 | euler | sgm_uniform | 40 | 4.5 | Steps and CFG from the card. The sampler is my default. |
+| sd3.5_medium | SD3.5 | euler | sgm_uniform | 40 | 4.5 | Steps and CFG from the card. The sampler is the kit's default. |
 | qwen-image-Q3_K_M | Qwen-Image | euler | simple | 20 | 2.5 | Typical ComfyUI defaults. Not checked on this page. |
 
 ## Licenses (what matters for a sold game)

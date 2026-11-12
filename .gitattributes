@@ -2,3 +2,24 @@
 *.ps1 text eol=crlf
 *.png binary
 *.jpg binary
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.pdf binary
+*.xlsx binary
+*.json text eol=lf
+
+# Bootstrap files that do not ship
+.claude/ export-ignore
+.kickoff/ export-ignore
+_audit/ export-ignore
+exchange/ export-ignore
+CLAUDE.md export-ignore
+PROJECT_BRIEF.md export-ignore
+PROJECT_STATUS.md export-ignore
+NEXT.md export-ignore
+DECISIONS.md export-ignore
+REQUIREMENTS.md export-ignore
+INDEX.md export-ignore
+**/INDEX.md export-ignore
+tools/ export-ignore

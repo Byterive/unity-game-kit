@@ -3,3 +3,19 @@ __pycache__/
 node_modules/
 .claude/settings.local.json
 .claude/settings.json.bak
+
+# Added by kickoff
+.env
+.env.*
+*.pem
+*.key
+secrets/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/settings.local.json.bak
+# secrets
+# editors and OS
+# Claude local state
+# caches

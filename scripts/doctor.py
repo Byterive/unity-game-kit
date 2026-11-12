@@ -60,7 +60,7 @@ class Doctor:
             self.add("git", "Git repo and hooks", "ok", "repo with pre-commit hook")
         else:
             self.add("git", "Git repo and hooks", "warn", "no pre-commit hook",
-                     "/kickoff:bootstrap with the unity profile")
+                     "/kickoff:kickoff with the unity profile")
 
     def editor(self):
         ver = re.search(r"m_EditorVersion: (\S+)", read(self.unity / "ProjectSettings" / "ProjectVersion.txt"))
