@@ -1,6 +1,6 @@
 {
   "name": "unity-game-kit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Set up any Unity game project for Claude Code: Android build and install pipeline, Editor test/play/screenshot checks, local ComfyUI art pipeline with model comparison, and a doctor that says what is missing.",
   "author": {
     "name": "Junaid Iqbal",

@@ -1,8 +1,10 @@
+![unity-game-kit: the same Unity setup every time, and it tells you what is missing](assets/readme-banner.png)
+
 # unity-game-kit
 
 The same Unity setup every time, and it tells you what is missing.
 
-Version 0.2.0 · MIT · Works with Claude Code
+Version 0.2.1 · MIT · Works with Claude Code
 
 ## What it does
 
@@ -16,6 +18,16 @@ We built unity-game-kit to set up a Unity game project the same way every time, 
 
 Scope: Windows, Unity 6, Android.
 
+## How it works
+
+![How Unity Game Kit works: game setup, game doctor, art asset, check, build Android](assets/workflow.png)
+
+1. `/game-setup` copies the kit into the project.
+2. `/game-doctor` finds the next missing step.
+3. `/asset` makes art with your local ComfyUI.
+4. `/check` runs compile and test checks and takes a play-mode screenshot.
+5. `/build-android` builds an APK or a signed AAB.
+
 ## Install
 
 ```
@@ -24,6 +36,17 @@ Scope: Windows, Unity 6, Android.
 ```
 
 Pick **project** scope inside each game. After a new version is released: `/plugin marketplace update byterive-kit`.
+
+## Try it
+
+1. `/game-setup`
+   It asks the game name, platforms, orientation, art style and 2D modules, copies the kit, and runs the doctor.
+2. `/game-doctor`
+   It checks the real project and prints a table with the next missing step.
+3. `/check`
+   It runs the compile and test checks, the level check and a play-mode screenshot, and reports pass or fail with the screenshot.
+
+![Example /game-doctor output on a new project: a table of checks marked OK, WARN or MISSING, and the next step, git init](assets/game-doctor.png)
 
 ## What you get
 
@@ -60,6 +83,7 @@ More in the [how-to](https://github.com/Byterive/kit/blob/main/docs/howto/02-uni
 - Art generation needs a local ComfyUI and models you download yourself under their own licences. `reference/comfyui-models.md` lists models for a 12 GB GPU and has a licences section.
 - ComfyUI runs on your own machine. The kit talks to it only at `http://127.0.0.1:8188`, set in `automation/config.json`.
 - Background removal uses `rembg` and `onnxruntime`. You install them yourself with pip (`pip install -r automation/requirements.txt`); the kit does not bundle or auto-install them.
+- Privacy: see [PRIVACY.md](PRIVACY.md).
 
 ## Tests
 
