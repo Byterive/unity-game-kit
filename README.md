@@ -4,7 +4,7 @@
 
 The same Unity setup every time, and it tells you what is missing.
 
-Version 0.2.1 · MIT · Works with Claude Code
+Version 0.2.2 · MIT · Works with Claude Code
 
 ## What it does
 
