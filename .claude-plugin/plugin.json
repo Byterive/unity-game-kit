@@ -1,6 +1,6 @@
 {
   "name": "unity-game-kit",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Set up any Unity game project for Claude Code: Android build and install pipeline, Editor test/play/screenshot checks, local ComfyUI art pipeline with model comparison, and a doctor that says what is missing.",
   "author": {
     "name": "Junaid Iqbal",
@@ -15,5 +15,6 @@
   ],
   "license": "MIT",
   "homepage": "https://byterive.com",
+  "privacyPolicyUrl": "https://github.com/Byterive/unity-game-kit/blob/main/PRIVACY.md",
   "repository": "https://github.com/Byterive/unity-game-kit"
 }
